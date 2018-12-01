@@ -1,0 +1,46 @@
+body{margin:0px;}
+/*nav 樣式設定*/
+
+nav{
+	display:flex;
+	text-align:center;
+	}
+
+nav>.logo{
+	/*沒有彈性、固定尺寸*/
+	flex:none;width:100px;
+	background-color:green;
+	}
+	
+nav>.menu{
+	/*把容器空間張滿*/
+	flex:auto;
+	background-color:pink;
+	}
+
+nav>.user{
+	flex:none;width:100px;
+	background-color:green;
+	}
+
+main{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	/*水平對齊→靠左:flex-start;靠右:flex-end*/
+	align-items:stretch;
+	/*預設值:stretch;靠中:center;靠上:flex-start;靠下:flex-end*/
+	background-color:blue;
+	}
+
+main>.item{
+	flex:none;
+	width:300px;
+	margin:10px;
+	background-color:white;
+	padding:10px;
+	}
+
+
+@media (max-width:1200px){main>.item{width:45%;}}
+@media (max-width:500px){main>.item{width:90%;}}
